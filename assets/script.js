@@ -40,7 +40,7 @@ function game() {
     ctx.fillStyle = "Orange";
     ctx.fillRect(foodX, foodY, blockSize, blockSize);
 
-    //this replaces the food once the snake moves over it
+    //this replaces the food once the snake moves over it as well as ads a segment to the body
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
         placeFood();
