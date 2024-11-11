@@ -18,26 +18,37 @@ let foodX;
 let foodY;
 
 let gameOver = false;
+let gameInterval;
 
-//This will need to activate by the play button.
-window.onload = function () {
-    //This sets the playing field to the canvas size.
+function startGame() {
+    gameOver = false;
+    snakeX = blockSize * 5;
+    snakeY = blockSize * 5;
+    snakeBody = [];
+    speedX = 0;
+    speedY = 0;
+
     gameCanvas.height = rowSize * blockSize;
     gameCanvas.width = colSize * blockSize;
 
     placeFood();
     document.addEventListener("keydown", changeDirection);
-    // This begins the game and sets its speed
-    setInterval(game, 100);
+
+    // Clear any existing game interval
+    if (gameInterval) clearInterval(gameInterval);
+    
+    // Start a new game interval with a fixed speed
+    gameInterval = setInterval(game, 100);
 }
 
 function game() {
+    if (gameOver) return;
      // The game's background color
-    ctx.fillStyle = '#77A7F7';
+    ctx.fillStyle = '#66ff66';
     ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
 
     // setting the color of the food
-    ctx.fillStyle = "Orange";
+    ctx.fillStyle = "#ff4d4d";
     ctx.fillRect(foodX, foodY, blockSize, blockSize);
 
     //this replaces the food once the snake moves over it as well as ads a segment to the body
@@ -108,3 +119,7 @@ function changeDirection(direction) {
             speedY = 0;
         }
 }
+
+window.onload = function () {
+    document.getElementById("playButton").addEventListener("click", startGame);
+};
