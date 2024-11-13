@@ -30,7 +30,7 @@ h1 {
 }
 
 #playButton {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 button {
@@ -75,7 +75,7 @@ button {
 #playArea {
     margin-top: 20px;
     width: 80%;
-    max-width: 600px;
+    max-width: 400px;
     height: 400px;
     background-color: #2e2e2e;
     border: 2px dashed #66ff66; 

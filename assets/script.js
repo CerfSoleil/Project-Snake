@@ -123,3 +123,10 @@ function changeDirection(direction) {
 window.onload = function () {
     document.getElementById("playButton").addEventListener("click", startGame);
 };
+
+// This listener prevents the page from scrolling when arrow keys are pressed.
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
