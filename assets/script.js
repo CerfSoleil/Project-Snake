@@ -120,6 +120,37 @@ function changeDirection(direction) {
         }
 }
 
+
+// Highlight the arrow key when it is pressed
+function highlightArrowKey(event) {
+    let arrowElement;
+
+    if (event.code == "ArrowUp") {
+        arrowElement = document.getElementById("keyUp");
+    } else if (event.code == "ArrowDown") {
+        arrowElement = document.getElementById("keyDown");
+    } else if (event.code == "ArrowLeft") {
+        arrowElement = document.getElementById("keyLeft");
+    } else if (event.code == "ArrowRight") {
+        arrowElement = document.getElementById("keyRight");
+    }
+    
+    if (arrowElement) {
+        arrowElement.classList.add("active");
+    
+        
+        setTimeout(() => {
+            arrowElement.classList.remove("active");
+        }, 200);
+    }
+}
+document.addEventListener("keydown", highlightArrowKey);
+
+
+
+
+
+
 window.onload = function () {
     document.getElementById("playButton").addEventListener("click", startGame);
 };
