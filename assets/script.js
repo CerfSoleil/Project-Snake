@@ -146,6 +146,22 @@ function highlightArrowKey(event) {
 }
 document.addEventListener("keydown", highlightArrowKey);
 
+// Score tracker
+let score = 0;
+function eatfood () {
+    if (snakeX == foodX && snakeY == foodY) {
+        score++;
+        updateScoreDisplay ();
+    }
+}
+function updateScoreDisplay () {
+    const scoreElement = document.getElementById('score')
+    scoreElement.innerText = score;
+}
+
+
+
+
 
 
 
