@@ -57,7 +57,7 @@ function game() {
     if (snakeX === foodX && snakeY === foodY) {
         snakeBody.push([foodX, foodY]);
         placeFood();
-        score++;
+        score = score + 80;
         updateScoreDisplay();
     }
 
@@ -148,8 +148,15 @@ function updateLeaderboard() {
     }
 }
 
+//This can be deleted
+console.log(JSON.parse(localStorage.getItem("leaderboard")));
+
 function displayLeaderboard() {
-    const storedLeaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+    const storedLeaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [
+        { name: "Nolan", score: 40 },
+        { name: "Henry", score: 30 },
+        { name: "Duncan", score: 20 },
+    ];
 
     storedLeaderboard.forEach((entry, index) => {
         const nameCell = document.getElementById(`un${index + 1}`);
@@ -193,6 +200,7 @@ document.addEventListener("keydown", highlightArrowKey);
 
 window.onload = function () {
     document.getElementById("playButton").addEventListener("click", startGame);
+    displayLeaderboard();
 };
 
 // This listener prevents the page from scrolling when arrow keys are pressed.
