@@ -14,6 +14,8 @@
     <p id="instructions">Press Play to Begin!</p>
     <div id="playButton">
         <button>Play</button>
+        <div class="break"></div>
+        <div id="score"></div>
     </div>
     <section id="gameplay">
         <div id="arrowKeys">
@@ -23,9 +25,34 @@
             <p class="arrows" id="keyDown">⇓</p>
             <p class="arrows" id="keyRight">⇒</p>
         </div>
-        <canvas src="" id="playArea">Game Play Area</canvas>  
+        <canvas src="" id="playArea">Game Play Area</canvas>
+        <section id="scoreBoard">
+            <div class="row">
+                <div class="cell">Username</div>
+                <div class="cell">Score</div>
+            </div>
+            <div class="row">
+                <div class="cell" id="un1">John Doe</div>
+                <div class="cell" id="score1">30</div>
+            </div>
+            <div class="row">
+                <div class="cell" id="un2">Jane Doe</div>
+                <div class="cell" id="score2">25</div>
+            </div>
+            <div class="row">
+                <div class="cell" id="un3">John Doe</div>
+                <div class="cell" id="score3">30</div>
+            </div>
+            <div class="row">
+                <div class="cell" id="un4">Jane Doe</div>
+                <div class="cell" id="score4">25</div>
+            </div>
+            <div class="row">
+                <div class="cell" id="un5">Jane Doe</div>
+                <div class="cell" id="score5">25</div>
+            </div>
+        </section> 
     </section> 
-    <div id="score">0</div>
     <footer id="credits">
         <p>A project by Henry Euper, Nolan Marshke, and Duncan Jones.</p>
     </footer>
