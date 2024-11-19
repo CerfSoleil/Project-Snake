@@ -81,7 +81,7 @@ h1 {
     border: 1px solid #66ff66;
 }
 
-button {
+/* button {
     background-color: #66ff66; 
     color: #2e2e2e;
     border: none;
@@ -89,6 +89,10 @@ button {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+} */
+
+button {
+    background-color: #66ff66;
 }
 
 #arrowKeys {
@@ -101,8 +105,8 @@ button {
     border-radius: 8px;
     text-align: center;
     width: 80%;
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 150px;
+    max-height: 150px;
     justify-content: center;
     border: 2px solid #ff4d4d; 
     align-self: flex-end;
