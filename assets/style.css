@@ -16,6 +16,7 @@ header {
 
 h1 {
     color: #ff4d4d; 
+    font-size: 3rem;
 }
 
 #instructions {
@@ -29,44 +30,11 @@ h1 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    padding: 50px;
 }
 
 #playButton {
     margin: 10px 0;
-}
-
-#scoreboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#scoreTitleU {
-    font-weight: bold;
-    text-decoration: underline;
-    border-bottom: 4px solid #ff4d4d;
-    border-top: 2px solid #ff4d4d;
-    border-left: 2px solid #ff4d4d;
-}
-
-#scoreTitleS {
-    font-weight: bold;
-    text-decoration: underline;
-    border-bottom: 4px solid #ff4d4d;
-    border-top: 2px solid #ff4d4d;
-    border-right: 2px solid #ff4d4d;
-}
-
-#un1, #un2, #un3, #un4, #un5 {
-    border-left: 2px solid #ff4d4d;
-}
-
-#score1, #score2, #score3, #score4, #score5 {
-    border-right: 2px solid #ff4d4d;
-}
-
-#un5, #score5 {
-    border-bottom: 2px solid #ff4d4d;
 }
 
 .row {
@@ -100,6 +68,7 @@ button {
     flex-wrap: wrap;
     margin-top: 20px;
     margin-left: 50px;
+    margin-right: 50px;
     padding: 15px;
     background-color: #2e2e2e;
     border-radius: 8px;
@@ -110,6 +79,7 @@ button {
     justify-content: center;
     border: 2px solid #ff4d4d; 
     align-self: flex-end;
+    margin-bottom: 140px;
 }
 
 .arrows {

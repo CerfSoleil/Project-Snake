@@ -18,6 +18,18 @@
         <div class="break"></div>
         <div id="score"></div>
     </div>
+    
+    <div class="modal" id="gameOverModal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <h2 class="title has-text-centered">Game Over</h2>
+                <p class="subtitle has-text-centered">Your score: <span id="modalScore"></span></p>
+                <button id="playAgainButton" class="button is-white is-fullwidth">Play Again</button>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
     <section id="gameplay" class="box">
         <div id="arrowKeys" class="box">
             <p class="arrows" id="keyUp">⇑</p>
@@ -27,32 +39,6 @@
             <p class="arrows" id="keyRight">⇒</p>
         </div>
         <canvas src="" id="playArea">Game Play Area</canvas>
-        <section id="scoreBoard" class="box">
-            <div class="row">
-                <div class="cell" id="scoreTitleU">Username</div>
-                <div class="cell" id="scoreTitleS">Score</div>
-            </div>
-            <div class="row">
-                <div class="cell" id="un1">-</div>
-                <div class="cell" id="score1">0</div>
-            </div>
-            <div class="row">
-                <div class="cell" id="un2">-</div>
-                <div class="cell" id="score2">0</div>
-            </div>
-            <div class="row">
-                <div class="cell" id="un3">-</div>
-                <div class="cell" id="score3">0</div>
-            </div>
-            <div class="row">
-                <div class="cell" id="un4">-</div>
-                <div class="cell" id="score4">0</div>
-            </div>
-            <div class="row">
-                <div class="cell" id="un5">-</div>
-                <div class="cell" id="score5">0</div>
-            </div>
-        </section> 
     </section> 
     <footer id="credits" class="box">
         <p>A project by Henry Euper, Nolan Marshke, and Duncan Jones.</p>

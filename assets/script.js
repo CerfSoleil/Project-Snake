@@ -17,9 +17,6 @@ let gameInterval;
 let score = 0;
 
 
-let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
-
-
 
 function startGame() {
     gameOver = false;
@@ -124,51 +121,37 @@ function changeDirection(event) {
 
 
 
-
-
 function endGame() {
-    gameOver = true;
-    alert("Game Over");
-    updateLeaderboard();
+    if (!gameOver) {
+        gameOver = true; // Set the game state to over
+        clearInterval(gameInterval); // Stop the game loop
+
+        // Show the Game Over modal
+        const modal = document.getElementById("gameOverModal");
+        const modalScore = document.getElementById("modalScore");
+        modalScore.innerText = score; 
+        modal.classList.add("is-active"); 
+
+        // Set up event listener for the "Play Again" button
+        const playAgainButton = document.getElementById("playAgainButton");
+        playAgainButton.onclick = () => {
+            modal.classList.remove("is-active"); // Close the modal
+            startGame(); // Restart the game
+        };
+
+        // Close modal with the close button
+        const closeModal = document.querySelector(".modal-close");
+        closeModal.onclick = () => {
+            modal.classList.remove("is-active");
+        };
+    }
 }
+
 
 function updateScoreDisplay() {
     const scoreElement = document.getElementById("score");
     scoreElement.innerText = `Score: ${score}`;
 }
-
-function updateLeaderboard() {
-    const playerName = prompt("Enter your name for the leaderboard:");
-    if (playerName) {
-        leaderboard.push({ name: playerName, score: score });
-        leaderboard.sort((a, b) => b.score - a.score);
-        leaderboard = leaderboard.slice(0, 5); 
-        localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
-        displayLeaderboard();
-    }
-}
-
-//This can be deleted
-console.log(JSON.parse(localStorage.getItem("leaderboard")));
-
-function displayLeaderboard() {
-    const storedLeaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [
-        { name: "Nolan", score: 40 },
-        { name: "Henry", score: 30 },
-        { name: "Duncan", score: 20 },
-    ];
-
-    storedLeaderboard.forEach((entry, index) => {
-        const nameCell = document.getElementById(`un${index + 1}`);
-        const scoreCell = document.getElementById(`score${index + 1}`);
-        if (nameCell && scoreCell) {
-            nameCell.innerText = entry.name;
-            scoreCell.innerText = entry.score;
-        }
-    });
-}
-
-
 
 
 
@@ -196,6 +179,9 @@ function highlightArrowKey(event) {
     }
 }
 document.addEventListener("keydown", highlightArrowKey);
+
+
+
 
 
 window.onload = function () {
