@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Snake Game</title>
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"/>
+    <link rel="stylesheet" href="./assets/style.css"/>
 </head>
 <body>
     <header>
@@ -13,12 +14,12 @@
     </header>
     <p id="instructions">Press Play to Begin!</p>
     <div id="playButton">
-        <button>Play</button>
+        <button class="button is-white">Play</button>
         <div class="break"></div>
         <div id="score"></div>
     </div>
-    <section id="gameplay">
-        <div id="arrowKeys">
+    <section id="gameplay" class="box">
+        <div id="arrowKeys" class="box">
             <p class="arrows" id="keyUp">⇑</p>
             <div class="break"></div>
             <p class="arrows" id="keyLeft">⇐</p>
@@ -26,7 +27,7 @@
             <p class="arrows" id="keyRight">⇒</p>
         </div>
         <canvas src="" id="playArea">Game Play Area</canvas>
-        <section id="scoreBoard">
+        <section id="scoreBoard" class="box">
             <div class="row">
                 <div class="cell" id="scoreTitleU">Username</div>
                 <div class="cell" id="scoreTitleS">Score</div>
@@ -53,7 +54,7 @@
             </div>
         </section> 
     </section> 
-    <footer id="credits">
+    <footer id="credits" class="box">
         <p>A project by Henry Euper, Nolan Marshke, and Duncan Jones.</p>
     </footer>
     
