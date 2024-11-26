@@ -6,9 +6,13 @@ The conception of this project was to use what we had learned in CSS, JavaScript
 
 ## Built With
 HTML
+
 CSS
+
 JavaScript
+
 [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+
 [Bulma](https://bulma.io/)
 
 ## Getting Started
