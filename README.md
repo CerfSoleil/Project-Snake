@@ -18,7 +18,7 @@ JavaScript
 ## Getting Started
 To run, simply go to the deployed link here: [Project Snake](https://cerfsoleil.github.io/Project-Snake/)
 
-To run on your own device, you simply need to download the files, unzip the package, and open index.html in your default browser. There are no necessary prerequisites needed. Have fun!
+If instead you'd like to run it on your own device, all that you need to do is download the files, unzip the package, and open index.html in your default browser. There are no necessary prerequisites needed. Have fun!
 
 ## Licence
 Distibuted using the MIT licence. See LICENSE.txt for more information.
